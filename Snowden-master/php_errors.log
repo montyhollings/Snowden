@@ -1,0 +1,52 @@
+[08-Nov-2019 13:43:56 Europe/London] PHP Parse error:  syntax error, unexpected 'en' (T_STRING), expecting ',' or ';' in D:\Inetpub\wwwroot\johng\jg_monty\Snowden-master\index.php on line 3
+[08-Nov-2019 13:44:20 Europe/London] PHP Parse error:  syntax error, unexpected 'en' (T_STRING), expecting ',' or ';' in D:\Inetpub\wwwroot\johng\jg_monty\Snowden-master\index.php on line 3
+[08-Nov-2019 13:45:54 Europe/London] PHP Parse error:  syntax error, unexpected '<', expecting end of file in D:\Inetpub\wwwroot\johng\jg_monty\Snowden-master\index.php on line 2
+[08-Nov-2019 13:46:04 Europe/London] PHP Parse error:  syntax error, unexpected '<', expecting end of file in D:\Inetpub\wwwroot\johng\jg_monty\Snowden-master\index.php on line 2
+[08-Nov-2019 13:47:03 Europe/London] PHP Warning:  require(nav.html): failed to open stream: No such file or directory in D:\Inetpub\wwwroot\johng\jg_monty\Snowden-master\index.php on line 14
+[08-Nov-2019 13:47:03 Europe/London] PHP Fatal error:  require(): Failed opening required 'nav.html' (include_path='.;D:\Inetpub\php_includes') in D:\Inetpub\wwwroot\johng\jg_monty\Snowden-master\index.php on line 14
+[08-Nov-2019 13:57:44 Europe/London] PHP Notice:  Undefined variable: username in D:\Inetpub\wwwroot\johng\jg_monty\Snowden-master\index.php on line 7
+[08-Nov-2019 13:57:44 Europe/London] PHP Notice:  Undefined variable: password in D:\Inetpub\wwwroot\johng\jg_monty\Snowden-master\index.php on line 7
+[08-Nov-2019 13:57:47 Europe/London] PHP Warning:  mysqli::__construct(): php_network_getaddresses: getaddrinfo failed: No such host is known.  in D:\Inetpub\wwwroot\johng\jg_monty\Snowden-master\index.php on line 7
+[08-Nov-2019 13:57:47 Europe/London] PHP Warning:  mysqli::__construct(): (HY000/2002): php_network_getaddresses: getaddrinfo failed: No such host is known.  in D:\Inetpub\wwwroot\johng\jg_monty\Snowden-master\index.php on line 7
+[08-Nov-2019 13:58:00 Europe/London] PHP Warning:  mysqli::__construct(): php_network_getaddresses: getaddrinfo failed: No such host is known.  in D:\Inetpub\wwwroot\johng\jg_monty\Snowden-master\index.php on line 7
+[08-Nov-2019 13:58:00 Europe/London] PHP Warning:  mysqli::__construct(): (HY000/2002): php_network_getaddresses: getaddrinfo failed: No such host is known.  in D:\Inetpub\wwwroot\johng\jg_monty\Snowden-master\index.php on line 7
+[08-Nov-2019 13:58:33 Europe/London] PHP Warning:  mysqli::__construct(): php_network_getaddresses: getaddrinfo failed: No such host is known.  in D:\Inetpub\wwwroot\johng\jg_monty\Snowden-master\index.php on line 7
+[08-Nov-2019 13:58:33 Europe/London] PHP Warning:  mysqli::__construct(): (HY000/2002): php_network_getaddresses: getaddrinfo failed: No such host is known.  in D:\Inetpub\wwwroot\johng\jg_monty\Snowden-master\index.php on line 7
+[08-Nov-2019 13:59:04 Europe/London] PHP Warning:  mysqli::__construct(): (HY000/1045): Access denied for user 'jg_monty'@'localhost' (using password: YES) in D:\Inetpub\wwwroot\johng\jg_monty\Snowden-master\index.php on line 7
+[08-Nov-2019 13:59:11 Europe/London] PHP Warning:  mysqli::__construct(): (HY000/1045): Access denied for user 'jg_monty'@'localhost' (using password: YES) in D:\Inetpub\wwwroot\johng\jg_monty\Snowden-master\index.php on line 7
+[08-Nov-2019 13:59:12 Europe/London] PHP Warning:  mysqli::__construct(): (HY000/1045): Access denied for user 'jg_monty'@'localhost' (using password: YES) in D:\Inetpub\wwwroot\johng\jg_monty\Snowden-master\index.php on line 7
+[08-Nov-2019 13:59:29 Europe/London] PHP Warning:  mysqli::__construct(): (HY000/1045): Access denied for user 'jg_monty'@'localhost' (using password: YES) in D:\Inetpub\wwwroot\johng\jg_monty\Snowden-master\index.php on line 7
+[08-Nov-2019 13:59:29 Europe/London] PHP Warning:  mysqli::__construct(): (HY000/1045): Access denied for user 'jg_monty'@'localhost' (using password: YES) in D:\Inetpub\wwwroot\johng\jg_monty\Snowden-master\index.php on line 7
+[08-Nov-2019 13:59:30 Europe/London] PHP Warning:  mysqli::__construct(): (HY000/1045): Access denied for user 'jg_monty'@'localhost' (using password: YES) in D:\Inetpub\wwwroot\johng\jg_monty\Snowden-master\index.php on line 7
+[08-Nov-2019 13:59:30 Europe/London] PHP Warning:  mysqli::__construct(): (HY000/1045): Access denied for user 'jg_monty'@'localhost' (using password: YES) in D:\Inetpub\wwwroot\johng\jg_monty\Snowden-master\index.php on line 7
+[08-Nov-2019 13:59:30 Europe/London] PHP Warning:  mysqli::__construct(): (HY000/1045): Access denied for user 'jg_monty'@'localhost' (using password: YES) in D:\Inetpub\wwwroot\johng\jg_monty\Snowden-master\index.php on line 7
+[08-Nov-2019 13:59:30 Europe/London] PHP Warning:  mysqli::__construct(): (HY000/1045): Access denied for user 'jg_monty'@'localhost' (using password: YES) in D:\Inetpub\wwwroot\johng\jg_monty\Snowden-master\index.php on line 7
+[08-Nov-2019 13:59:30 Europe/London] PHP Warning:  mysqli::__construct(): (HY000/1045): Access denied for user 'jg_monty'@'localhost' (using password: YES) in D:\Inetpub\wwwroot\johng\jg_monty\Snowden-master\index.php on line 7
+[08-Nov-2019 13:59:31 Europe/London] PHP Warning:  mysqli::__construct(): (HY000/1045): Access denied for user 'jg_monty'@'localhost' (using password: YES) in D:\Inetpub\wwwroot\johng\jg_monty\Snowden-master\index.php on line 7
+[08-Nov-2019 13:59:31 Europe/London] PHP Warning:  mysqli::__construct(): (HY000/1045): Access denied for user 'jg_monty'@'localhost' (using password: YES) in D:\Inetpub\wwwroot\johng\jg_monty\Snowden-master\index.php on line 7
+[08-Nov-2019 13:59:31 Europe/London] PHP Warning:  mysqli::__construct(): (HY000/1045): Access denied for user 'jg_monty'@'localhost' (using password: YES) in D:\Inetpub\wwwroot\johng\jg_monty\Snowden-master\index.php on line 7
+[08-Nov-2019 13:59:31 Europe/London] PHP Warning:  mysqli::__construct(): (HY000/1045): Access denied for user 'jg_monty'@'localhost' (using password: YES) in D:\Inetpub\wwwroot\johng\jg_monty\Snowden-master\index.php on line 7
+[08-Nov-2019 14:00:48 Europe/London] PHP Notice:  Undefined variable: conn in D:\Inetpub\wwwroot\johng\jg_monty\Snowden-master\index.php on line 5
+[08-Nov-2019 14:00:48 Europe/London] PHP Notice:  Trying to get property of non-object in D:\Inetpub\wwwroot\johng\jg_monty\Snowden-master\index.php on line 5
+[08-Nov-2019 14:00:48 Europe/London] PHP Notice:  Undefined variable: conn in D:\Inetpub\wwwroot\johng\jg_monty\Snowden-master\index.php on line 10
+[08-Nov-2019 14:00:48 Europe/London] PHP Fatal error:  Uncaught Error: Call to a member function query() on null in D:\Inetpub\wwwroot\johng\jg_monty\Snowden-master\index.php:10
+Stack trace:
+#0 {main}
+  thrown in D:\Inetpub\wwwroot\johng\jg_monty\Snowden-master\index.php on line 10
+[08-Nov-2019 14:03:43 Europe/London] PHP Fatal error:  Uncaught Error: Call to undefined function dd() in D:\Inetpub\wwwroot\johng\jg_monty\Snowden-master\frontpage.php:6
+Stack trace:
+#0 D:\Inetpub\wwwroot\johng\jg_monty\Snowden-master\index.php(27): require()
+#1 {main}
+  thrown in D:\Inetpub\wwwroot\johng\jg_monty\Snowden-master\frontpage.php on line 6
+[08-Nov-2019 14:05:30 Europe/London] PHP Parse error:  syntax error, unexpected ';' in D:\Inetpub\wwwroot\johng\jg_monty\Snowden-master\frontpage.php on line 9
+[08-Nov-2019 14:07:20 Europe/London] PHP Parse error:  syntax error, unexpected 'card' (T_STRING) in D:\Inetpub\wwwroot\johng\jg_monty\Snowden-master\frontpage.php on line 9
+[08-Nov-2019 14:07:26 Europe/London] PHP Parse error:  syntax error, unexpected 'title' (T_STRING) in D:\Inetpub\wwwroot\johng\jg_monty\Snowden-master\frontpage.php on line 11
+[08-Nov-2019 14:08:17 Europe/London] PHP Parse error:  syntax error, unexpected 'title' (T_STRING) in D:\Inetpub\wwwroot\johng\jg_monty\Snowden-master\frontpage.php on line 11
+[08-Nov-2019 14:16:51 Europe/London] PHP Parse error:  syntax error, unexpected '/' in D:\Inetpub\wwwroot\johng\jg_monty\Snowden-master\frontpage.php on line 17
+[08-Nov-2019 14:17:02 Europe/London] PHP Parse error:  syntax error, unexpected '/' in D:\Inetpub\wwwroot\johng\jg_monty\Snowden-master\frontpage.php on line 17
+[08-Nov-2019 14:17:11 Europe/London] PHP Parse error:  syntax error, unexpected '/' in D:\Inetpub\wwwroot\johng\jg_monty\Snowden-master\frontpage.php on line 17
+[08-Nov-2019 14:17:46 Europe/London] PHP Parse error:  syntax error, unexpected ''</div>'' (T_CONSTANT_ENCAPSED_STRING) in D:\Inetpub\wwwroot\johng\jg_monty\Snowden-master\frontpage.php on line 17
+[08-Nov-2019 14:18:30 Europe/London] PHP Parse error:  syntax error, unexpected ''</div>'' (T_CONSTANT_ENCAPSED_STRING) in D:\Inetpub\wwwroot\johng\jg_monty\Snowden-master\frontpage.php on line 16
+[08-Nov-2019 14:18:56 Europe/London] PHP Parse error:  syntax error, unexpected ''</div>'' (T_CONSTANT_ENCAPSED_STRING) in D:\Inetpub\wwwroot\johng\jg_monty\Snowden-master\frontpage.php on line 16
+[08-Nov-2019 14:19:25 Europe/London] PHP Parse error:  syntax error, unexpected ''</div>'' (T_CONSTANT_ENCAPSED_STRING) in D:\Inetpub\wwwroot\johng\jg_monty\Snowden-master\frontpage.php on line 16
+[08-Nov-2019 14:20:02 Europe/London] PHP Parse error:  syntax error, unexpected ''</div>'' (T_CONSTANT_ENCAPSED_STRING) in D:\Inetpub\wwwroot\johng\jg_monty\Snowden-master\frontpage.php on line 16
