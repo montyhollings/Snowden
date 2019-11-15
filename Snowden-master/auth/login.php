@@ -23,8 +23,6 @@
 
           // Check Correct Password
           if($password == $mysqlUser["pass"]){//password_verify($password, $mysqlUser["pass"])){ 
-              // Start Session
-              session_start();
 
               // Session Store Credentials
               $_SESSION["USERNAME"] = $postUsername;
@@ -32,6 +30,10 @@
               $_SESSION['ADMIN'] = 1;
 
               ?><h1 class="m-auto text-center text-info"> Connected </h1><?php
+
+              header("Location: ?location=auth/account");
+
+              return(true);
           }
           // Incorrect Password
           else{
@@ -50,6 +52,8 @@
 
       ?></div><?php
     }
+
+    return(false);
   }
 ?>
 
@@ -60,7 +64,7 @@
     </div>
     <div class="col-4">
       <div class="card w-100">
-        <?php LoginUser($mysqlConnection); // Call LoginUser Function ?>
+        <?php if(!LoginUser($mysqlConnection)): // Call LoginUser Function ?>
         <div class="card-header text-center">
           Login
         </div>
@@ -83,6 +87,7 @@
             </div>
           </div>
         </form>
+        <?php endif; ?>
       </div>
     </div>
     <div class="col-4">

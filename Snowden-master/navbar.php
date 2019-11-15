@@ -22,12 +22,11 @@
         <a class="nav-item nav-link text-dark" href="?location=stories">Your Stories</a>
       </li>
       <li class="ml-auto">
-
-      <?php if (isset($_SESSION['loggedin']) && $_SESSION['loggedin'] == true): ?>
-        <a class="nav-item nav-link text-dark" href="?location=auth/account">Your Profile</a>
-      <?php else: ?>
-        <a class="nav-item nav-link text-dark" href="?location=auth/login">Login</a>
-      <?php endif; ?>
+        <?php if (isset($_SESSION['LOGGED-IN']) && $_SESSION['LOGGED-IN'] == true): ?>
+          <a class="nav-item nav-link text-dark" href="?location=auth/logout">Logout</a>
+        <?php else: ?>
+          <a class="nav-item nav-link text-dark" href="?location=auth/login">Login</a>
+        <?php endif; ?>
       </li>
     </ul>
     
