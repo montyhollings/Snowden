@@ -9,7 +9,7 @@ $con->close();
 <div class="col-4">
 </div>
 <div class="col-4">
-
+<!-- asdasd -->
 <?php  foreach($result as $res): ?>
 
     <div class="card bg-light p-2 my-3 d-flex flex-row">
