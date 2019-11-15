@@ -24,7 +24,7 @@
         <main>
             <?php
                 if(isset($_GET['location'])){
-                    include(strip_tags($_GET['location']));
+                    include(strip_tags($_GET['location']) . '.php');
                 }
                 else{
                     include('frontpage.php');

@@ -1,7 +1,8 @@
-<?php
+<?php /*
 $sql = "SELECT id, title, content, date, score FROM story";
 $result = $con->query($sql);
-$con->close();
+$con->close(); */
+$result = [];
 ?>
 
 <div class="container">
@@ -9,8 +10,7 @@ $con->close();
 <div class="col-4">
 </div>
 <div class="col-4">
-<!-- asdasd -->
-<?php  foreach($result as $res): ?>
+<?php foreach($result as $res): ?>
 
     <div class="card bg-light p-2 my-3 d-flex flex-row">
         <p class="mb-0 mr-auto">
