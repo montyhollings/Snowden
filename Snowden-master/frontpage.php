@@ -65,10 +65,10 @@ $mysqlConnection->close();
             
             <span class="float-right badge badge-primary badge-pill"><?= $res['score'] ?></span>
 
-            <button class="float-right btn btn-outline-secondary btn-sm fas fa-angle-down mr-2">
+            <button class="float-right btn btn-outline-secondary btn-sm fas fa-thumbs-up mr-2">
             </button>
 
-            <button class="float-right btn btn-outline-secondary btn-sm fas fa-angle-up mr-2">
+            <button class="float-right btn btn-outline-secondary btn-sm fas fa-thumbs-down mr-2">
             </button>
 
             <p class="card-text"><small class="text-muted"><?=time_ago(strtotime($res['date']))?></small></p> 
