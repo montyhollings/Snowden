@@ -1,6 +1,6 @@
 <?php
     // Make Connection String
-    $mysqlConnection = @mysqli_connect("localhost", "jg_luke", "123abc", "jg_luke")
+    $mysqlConnection = @mysqli_connect("localhost", "jg_monty", "123abc", "jg_monty")
     or die ("<h1> Sorry- Could not connect to the MySQL Database at this time. </h1> <a href='http://www.google.com'> <button><h1> Leave </h1></button> </a>");
 
     // Start Session
