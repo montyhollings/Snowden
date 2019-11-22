@@ -59,13 +59,21 @@ $con->close();
             <p class="card-text">
                 <?= $res['content'] ?>
             </p>
-            <p class="card-text">
-                Score: <?= $res['score'] ?>
-            </p>
             </div>
             <div class="card-footer">
+            
+            <span class="float-right badge badge-primary badge-pill"><?= $res['score'] ?></span>
+
+            <button class="float-right btn btn-outline-secondary btn-sm fas fa-angle-down mr-2">
+            </button>
+
+            <button class="float-right btn btn-outline-secondary btn-sm fas fa-angle-up mr-2">
+            </button>
+
             <p class="card-text"><small class="text-muted"><?=time_ago(strtotime($res['date']))?></small></p> 
-            </div>   
+            </div>
+
+
         
         </div>
 
