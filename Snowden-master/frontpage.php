@@ -1,7 +1,7 @@
 <?php
 $sql = "SELECT id, title, content, date, score, image FROM story";
-$result = $con->query($sql);
-$con->close();
+$result = $mysqlConnection->query($sql);
+$mysqlConnection->close();
 ?>
 
 <?php
@@ -60,7 +60,7 @@ $con->close();
                 <?= $res['content'] ?>
             </p>
             </div>
-            
+
             <div class="card-footer">
             
             <span class="float-right badge badge-primary badge-pill"><?= $res['score'] ?></span>
