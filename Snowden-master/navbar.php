@@ -33,10 +33,44 @@
             </div>
           </div>
         <?php else: ?>
-          <a class="nav-item nav-link text-dark" href="?location=auth/login">Login</a>
+          <button type="button" class="btn nav-item nav-link text-dark" data-toggle="modal" data-target="#LoginModal">
+            Login
+          </button>
+          <!--- a class="nav-item nav-link text-dark" href="?location=auth/login">Login</a --->
         <?php endif; ?>
       </li>
     </ul>
     
   </div>
 </nav>
+
+<!-- Login Modal -->
+<div class="modal fade" id="LoginModal" tabindex="-1" role="dialog" aria-labelledby="LoginModalLabel" aria-hidden="true">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="LoginModalLabel">Modal title</h5>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <form action="?location=auth/login" method="POST">
+        <div class="modal-body">
+          <div class="form-group">
+            <label for="FieldUsername">Username</label>
+            <input required type="text" class="form-control" name="FieldUsername" aria-describedby="Username" placeholder="Enter Username">
+            <small id="emailHelp" class="form-text text-muted">We'll never share your email with anyone else.</small>
+          </div>
+          <div class="form-group">
+            <label for="FieldPassword">Password</label>
+            <input required type="password" class="form-control" name="FieldPassword" placeholder="Password">
+          </div> 
+        </div>
+        <div class="modal-footer">
+          <p>Don't already have an account? <a href="?location=auth/register">Sign up</a>.</p>
+          <button type="submit" class=" float-right btn btn-primary">Submit</button>
+        </div>
+      </form>
+    </div>
+  </div>
+</div>

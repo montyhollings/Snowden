@@ -58,7 +58,7 @@
 
             if (isset($_SESSION['LOGGED-IN']) && $_SESSION['LOGGED-IN'] == true){
             
-                ?><h1 class="m-auto text-center text-info"> Connected </h1><?php
+                ?><h1 class="m-auto text-center text-info"> Already Connected </h1><?php
                 
                 header("Location: ?location=frontpage");
                 
