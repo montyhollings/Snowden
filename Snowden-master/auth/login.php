@@ -18,26 +18,37 @@
       try {
         // Check Correct Username
         if(mysqli_num_rows($mysqlUserName) > 0){
-          // Get Assoc User from Username
-          $mysqlUser = $mysqlUserName -> fetch_assoc();
+          // For all Usernames
+          while(mysqli_num_rows($mysqlUserName) > 0){
+            // Get Assoc User from Username
+            $mysqlUser = $mysqlUserName -> fetch_assoc();
 
-          // Check Correct Password
-          if($password == $mysqlUser["pass"]){//password_verify($password, $mysqlUser["pass"])){ 
+            // Check Account Deleted
+            if($mysqlUser["deleted"] == true){
+              ?><h1 class="m-auto text-center text-danger"> Account Deleted </h1><?php
 
-              // Session Store Credentials
-              $_SESSION["USERNAME"] = $postUsername;
-              $_SESSION["LOGGED-IN"] = true;
-              $_SESSION['ADMIN'] = 1;
+              return(false);
+            }
 
-              ?><h1 class="m-auto text-center text-info"> Connected </h1><?php
+            // Check Correct Password
+            if($password == $mysqlUser["pass"]){//password_verify($password, $mysqlUser["pass"])){ 
 
-              header("Location: ?location=auth/account");
+                // Session Store Credentials
+                $_SESSION["USER-ID"] = $mysqlUser["user_id"];
+                $_SESSION["USERNAME"] = $postUsername;
+                $_SESSION["LOGGED-IN"] = true;
+                $_SESSION['ADMIN'] = 1;
 
-              return(true);
-          }
-          // Incorrect Password
-          else{
-            ?><h1 class="m-auto text-center text-warning"> Incorrect Details </h1><?php
+                ?><h1 class="m-auto text-center text-info"> Connected </h1><?php
+
+                header("Location: ?location=frontpage");
+
+                return(true);
+            }
+            // Incorrect Password
+            else{
+              ?><h1 class="m-auto text-center text-warning"> Incorrect Details </h1><?php
+            }
           }
         }
         //Incorrect Username
@@ -51,6 +62,14 @@
       }
 
       ?></div><?php
+    }
+    if (isset($_SESSION['LOGGED-IN']) && $_SESSION['LOGGED-IN'] == true){
+      
+      ?><h1 class="m-auto text-center text-info"> Connected </h1><?php
+      
+      header("Location: ?location=frontpage");
+      
+      return(true);
     }
 
     return(false);
@@ -83,7 +102,7 @@
           <div class="card-footer">
             <button type="submit" class=" float-right btn btn-primary">Submit</button>
             <div class="container signin">
-              <p>Don't already have an account? <a href="?location=register">Sign up</a>.</p>
+              <p>Don't already have an account? <a href="?location=auth/register">Sign up</a>.</p>
             </div>
           </div>
         </form>

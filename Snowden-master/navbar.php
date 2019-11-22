@@ -23,7 +23,15 @@
       </li>
       <li class="ml-auto">
         <?php if (isset($_SESSION['LOGGED-IN']) && $_SESSION['LOGGED-IN'] == true): ?>
-          <a class="nav-item nav-link text-dark" href="?location=auth/logout">Logout</a>
+          <div class="dropdown">
+            <button class="btn nav-item nav-link text-dark" id="dropdownButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+              Account
+            </button>
+            <div class="dropdown-menu dropdown-menu-right" aria-labelledby="dropdownButton">
+              <a class="nav-item nav-link text-dark" href="?location=auth/account">Profile</a>
+              <a class="nav-item nav-link text-dark" href="?location=auth/logout">Logout</a>
+            </div>
+          </div>
         <?php else: ?>
           <a class="nav-item nav-link text-dark" href="?location=auth/login">Login</a>
         <?php endif; ?>
