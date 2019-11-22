@@ -1,0 +1,5 @@
+[22-Nov-2019 14:24:58 Europe/London] PHP Warning:  Invalid argument supplied for foreach() in D:\Inetpub\wwwroot\johng\jg_monty\Snowden\Snowden-master\frontpage.php on line 50
+[22-Nov-2019 14:26:12 Europe/London] PHP Warning:  Invalid argument supplied for foreach() in D:\Inetpub\wwwroot\johng\jg_monty\Snowden\Snowden-master\frontpage.php on line 41
+[22-Nov-2019 14:26:58 Europe/London] PHP Warning:  include(D:\Inetpub\wwwroot\johng\jg_monty\Snowden\Snowden-master\frontpage.php): failed to open stream: No such file or directory in D:\Inetpub\wwwroot\johng\jg_monty\Snowden\Snowden-master\index.php on line 33
+[22-Nov-2019 14:26:58 Europe/London] PHP Warning:  include(): Failed opening 'frontpage.php' for inclusion (include_path='.;D:\Inetpub\php_includes') in D:\Inetpub\wwwroot\johng\jg_monty\Snowden\Snowden-master\index.php on line 33
+[22-Nov-2019 14:27:37 Europe/London] PHP Warning:  Invalid argument supplied for foreach() in D:\Inetpub\wwwroot\johng\jg_monty\Snowden\Snowden-master\frontpage.php on line 50
