@@ -3,3 +3,8 @@
 [22-Nov-2019 14:26:58 Europe/London] PHP Warning:  include(D:\Inetpub\wwwroot\johng\jg_monty\Snowden\Snowden-master\frontpage.php): failed to open stream: No such file or directory in D:\Inetpub\wwwroot\johng\jg_monty\Snowden\Snowden-master\index.php on line 33
 [22-Nov-2019 14:26:58 Europe/London] PHP Warning:  include(): Failed opening 'frontpage.php' for inclusion (include_path='.;D:\Inetpub\php_includes') in D:\Inetpub\wwwroot\johng\jg_monty\Snowden\Snowden-master\index.php on line 33
 [22-Nov-2019 14:27:37 Europe/London] PHP Warning:  Invalid argument supplied for foreach() in D:\Inetpub\wwwroot\johng\jg_monty\Snowden\Snowden-master\frontpage.php on line 50
+[22-Nov-2019 14:55:51 Europe/London] PHP Warning:  include(topics.php): failed to open stream: No such file or directory in D:\Inetpub\wwwroot\johng\jg_monty\Snowden\Snowden-master\index.php on line 30
+[22-Nov-2019 14:55:51 Europe/London] PHP Warning:  include(): Failed opening 'topics.php' for inclusion (include_path='.;D:\Inetpub\php_includes') in D:\Inetpub\wwwroot\johng\jg_monty\Snowden\Snowden-master\index.php on line 30
+[22-Nov-2019 14:56:10 Europe/London] PHP Warning:  mysqli_num_rows() expects parameter 1 to be mysqli_result, boolean given in D:\Inetpub\wwwroot\johng\jg_monty\Snowden\Snowden-master\auth\login.php on line 20
+[22-Nov-2019 15:00:34 Europe/London] PHP Warning:  include(stories.php): failed to open stream: No such file or directory in D:\Inetpub\wwwroot\johng\jg_monty\Snowden\Snowden-master\index.php on line 30
+[22-Nov-2019 15:00:34 Europe/London] PHP Warning:  include(): Failed opening 'stories.php' for inclusion (include_path='.;D:\Inetpub\php_includes') in D:\Inetpub\wwwroot\johng\jg_monty\Snowden\Snowden-master\index.php on line 30
