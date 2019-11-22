@@ -60,6 +60,7 @@ $con->close();
                 <?= $res['content'] ?>
             </p>
             </div>
+            
             <div class="card-footer">
             
             <span class="float-right badge badge-primary badge-pill"><?= $res['score'] ?></span>
