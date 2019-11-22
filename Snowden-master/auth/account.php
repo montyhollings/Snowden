@@ -11,7 +11,7 @@
            <p class="text-secondary"><?php echo $_SESSION['USERNAME']; ?></p>
           </div>
           <div class="card-body">
-
+            <img class="w-100" src="https://i.dailymail.co.uk/i/pix/2012/12/16/article-2249044-1689BF2B000005DC-185_634x402.jpg"/>
           </div>
           <div class="card-footer w-100 mx-auto text-center row">
             <a class="text-danger col-6" href="?location=auth/logout"> Logout? </a>

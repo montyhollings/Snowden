@@ -25,7 +25,7 @@
 
             // Check Account Deleted
             if($mysqlUser["deleted"] == true){
-              ?><h1 class="m-auto text-center text-danger"> Account Deleted </h1><?php
+              ?><h1 class="m-auto text-center text-danger"> Account Deleted </h1></div><?php
 
               return(false);
             }
@@ -39,7 +39,7 @@
                 $_SESSION["LOGGED-IN"] = true;
                 $_SESSION['ADMIN'] = 1;
 
-                ?><h1 class="m-auto text-center text-info"> Connected </h1><?php
+                ?><h1 class="m-auto text-center text-info"> Connected </h1></div><?php
 
                 header("Location: ?location=frontpage");
 
@@ -91,12 +91,12 @@
           <form action="#" method="POST">
             <div class="form-group">
               <label for="FieldUsername">Username</label>
-              <input type="text" class="form-control" name="FieldUsername" aria-describedby="Username" placeholder="Enter Username">
+              <input required type="text" class="form-control" name="FieldUsername" aria-describedby="Username" placeholder="Enter Username">
               <small id="emailHelp" class="form-text text-muted">We'll never share your email with anyone else.</small>
             </div>
             <div class="form-group">
               <label for="FieldPassword">Password</label>
-              <input type="password" class="form-control" name="FieldPassword" placeholder="Password">
+              <input required type="password" class="form-control" name="FieldPassword" placeholder="Password">
             </div>   
           </div>
           <div class="card-footer">
