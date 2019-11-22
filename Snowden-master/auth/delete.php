@@ -13,9 +13,15 @@
             // Check Correct Username
             if(mysqli_num_rows($mysqlUserName) > 0){
                 // Account Deleted
-                mysqli_query($mysqlConnection, "UPDATE users SET 'delete'='1' WHERE user_id='$sessionUser'");
+                $mysqlUserDelete = mysqli_query($mysqlConnection, "UPDATE users SET deleted='1' WHERE user_id='$sessionUser'");
 
-                ?><h1 class="m-auto text-center text-info"> Deleted </h1><?php
+                // Try to Del
+                if($mysqlUserDelete){
+                    ?><h1 class="m-auto text-center text-info"> Deleted Your Account </h1><?php
+                }
+                else{
+                    ?><h1 class="m-auto text-center text-info"> Couldn't Delete Your Account </h1><?php
+                }
             }
         }
         // Not able to use queries
@@ -32,13 +38,10 @@
         // Kill Session
         session_destroy();
     }
-    else {
-        header("Location: ?location=auth/login");
+    else{
+        ?><h1 class="m-auto text-center text-info"> Couldn't Delete Your Account </h1><?php
     }
+
+    header("Refresh: 1.5; URL=?location=auth/login");
+
 ?>
-
-<h1 class="m-auto text-center text-info">
-    You have deleted your account!
-</h1>
-
-<?php header('Refresh: 3; URL=?location=frontpage'); ?>
