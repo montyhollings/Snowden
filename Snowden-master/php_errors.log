@@ -7,3 +7,5 @@
 [22-Nov-2019 15:01:49 Europe/London] PHP Warning:  include(): Failed opening 'stories.php' for inclusion (include_path='.;D:\Inetpub\php_includes') in D:\Inetpub\wwwroot\johng\jg_luke\Snowden\Snowden-master\index.php on line 31
 [29-Nov-2019 13:41:13 Europe/London] PHP Notice:  Undefined variable: result in D:\Inetpub\wwwroot\johng\jg_luke\Snowden\Snowden-master\frontpage.php on line 10
 [29-Nov-2019 13:41:13 Europe/London] PHP Warning:  Invalid argument supplied for foreach() in D:\Inetpub\wwwroot\johng\jg_luke\Snowden\Snowden-master\frontpage.php on line 10
+[29-Nov-2019 13:45:44 Europe/London] PHP Warning:  include(stories.php): failed to open stream: No such file or directory in D:\Inetpub\wwwroot\johng\jg_luke\Snowden\Snowden-master\index.php on line 31
+[29-Nov-2019 13:45:44 Europe/London] PHP Warning:  include(): Failed opening 'stories.php' for inclusion (include_path='.;D:\Inetpub\php_includes') in D:\Inetpub\wwwroot\johng\jg_luke\Snowden\Snowden-master\index.php on line 31
