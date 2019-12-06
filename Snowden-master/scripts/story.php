@@ -1,8 +1,7 @@
 <?php 
 
+$mysqlUser = $database->QueryDatabase("SELECT 1 FROM users WHERE user_id='$userId'");
 
-$sql = "SELECT id, title, content, date, score, image FROM story";
-$result =  mysqli_query($this->$mysqlConnection, $sql);
 $stories = [];
 foreach($result as $row) {
     $stories[] = new Story($row);
