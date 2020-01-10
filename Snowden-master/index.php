@@ -1,3 +1,17 @@
+<?php 
+    include_once('env.php');
+    include_once('scripts/connection.php');
+    include_once('scripts/user.php');
+
+    $connection = new Database($SNOWDEN_IP, $SNOWDEN_DB, $SNOWDEN_USER, $SNOWDEN_PASS);
+
+    if($connection->GetSession() != ''){
+        $user = new User;
+        $user->WithId($connection, $connection->GetSession());
+        $userStatus = $user->GetStatus();
+    }
+?>
+
 <!DOCTYPE html>
 <html lang="en">
     <head>
@@ -18,7 +32,7 @@
         <!--- Main --->
         <main>
             <?php
-                if(isset($_GET['location'])){
+                if(isset($_GET['location']) && file_exists($_GET['location'] . '.php')){
                     include(strip_tags($_GET['location']) . '.php');
                 }
                 else{
