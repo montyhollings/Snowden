@@ -1,14 +1,14 @@
 <?php
 
-class Database() {
-    private var $mysqlConnection = "";
+class Database {
+    private $mysqlConnection = "";
     
     function __construct($ip, $db, $user, $pass) {
         // Make Connection String
         $newMysqlConnection = mysqli_connect($ip, $user, $pass, $db);
 
         // Test Connection String
-        if(!$newMysqlConnection){
+        if($newMysqlConnection){
             // Store Connection
             $this->mysqlConnection = $newMysqlConnection;
 
@@ -16,8 +16,8 @@ class Database() {
             return true;
         }
         else{
-            // Kill and return
-            exit false;
+            // Kill
+            exit;
         }
     }
     
@@ -25,7 +25,7 @@ class Database() {
         // Attempt Query Use
         try {
             // Do Query
-            $queryResult = mysqli_query($this->$mysqlConnection, $queryString);
+            $queryResult = mysqli_query($this->mysqlConnection, $queryString);
 
             // If Valid Result
             if(mysqli_num_rows($queryResult) > 0) {
@@ -39,16 +39,16 @@ class Database() {
         // Not able to use queries
         catch(Exception $Except) {
             // Log it
-            error_log("!!! Error in doing Query !!! --- " . $Except)
+            error_log("!!! Error in doing Query !!! --- " . $Except);
 
-            // Kill and return
-            exit null;
+            // Kill
+            exit;
         }
     }
 
     function EscapeString($string){
         // Do Escape
-        return(mysqli_real_escape_string($this->$mysqlConnection, $string));
+        return(mysqli_real_escape_string($this->mysqlConnection, $string));
     }
 
     function StartSession($userId){
@@ -60,17 +60,19 @@ class Database() {
         $_SESSION["LOGGED-IN"] = true;
     }
 
-    function CheckSession(){
+    function GetSession(){
         // Test if User ID > -1 and if Logged In is Set and true
         if (isset($_SESSION['USER-ID']) && 
             $_SESSION['USER-ID'] > -1 && 
             isset($_SESSION['LOGGED-IN']) && 
             $_SESSION['LOGGED-IN'] == true)
         {
-            return true;
+            // Return ID
+            return($_SESSION['USER-ID']);
         }
         else{
-            return false;
+            // Return Empty
+            return('');
         }
 
     }
@@ -82,6 +84,16 @@ class Database() {
 
         // Kill Session
         session_destroy();
+    }
+
+    function __destruct(){
+        // If Session Call Session Killer
+        if($this->GetSession()){
+            $this->EndSession();
+        }
+
+        // Reset Vars
+        $this->mySqlConnection = "";
     }
 }
 
