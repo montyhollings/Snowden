@@ -1,59 +1,110 @@
 <?php 
 
-$mysqlUser = $database->QueryDatabase("SELECT 1 FROM users WHERE user_id='$userId'");
 
-$stories = [];
-foreach($result as $row) {
-    $stories[] = new Story($row);
+//$mysqlUser = $connection->QueryDatabase("SELECT 1 FROM users WHERE user_id='$userId'");
+
+$stories = $connection->QueryDatabase("SELECT * FROM story");
+
+$storyObject = [];
+
+foreach($stories as $row) {
+    array_push($storyObject, new Story($row));
 }
 
-class Story {
-    var $title = "";
-    var $content = "";
-    var $date = "";
-    var $score = "";
-    var $image = "";
 
-    public function __construct($row) {
-        $this->$title = $result['title'];
-        $this->content = $result['content'];
-        $this->date = $result['date'];
-        $this->score = $result['score'];
-        $this->image = $result['image']; 
+function sortArray($a, $b){
+    if ($a->getDate() == $b->getDate()) return 0;
+    return ($a->getDate() > $b->getDate()) ? -1 : 1;
+}
+
+usort($storyObject, "sortArray");
+
+//$storyObject = array_reverse($storyObject);
+
+class Story {
+    private $title;
+    private $content;
+    private $date;
+    private $score;
+    private $image;
+
+    public static function time_ago( $date )
+    {
+        $now = new DateTime;
+        $ago = new DateTime($date);
+        $diff = $now->diff($ago);
+    
+        $diff->w = floor($diff->d / 7);
+        $diff->d -= $diff->w * 7;
+    
+        $string = array(
+            'y' => 'year',
+            'm' => 'month',
+            'w' => 'week',
+            'd' => 'day',
+            'h' => 'hour',
+            'i' => 'minute',
+            's' => 'second',
+        );
+        foreach ($string as $k => &$v) {
+            if ($diff->$k) {
+                $v = $diff->$k . ' ' . $v . ($diff->$k > 1 ? 's' : '');
+            } else {
+                unset($string[$k]);
+            }
+        }
+    
+        if (!false) $string = array_slice($string, 0, 1);
+        return $string ? implode(', ', $string) . ' ago' : 'Just now';
+    }
+
+    function __construct($row) {
+        $this->title = $row['title'];
+        $this->content = $row['content'];
+        $this->date = $row['date'];
+        $this->score = $row['score'];
+        $this->image = $row['image']; 
     }
     
+    function getTitle() {
+		return $this->title;
+	}
 
-    // define( 'TIMEBEFORE_NOW',         'Posted Just Now' );
-    // define( 'TIMEBEFORE_MINUTE',      'Posted {num} minute ago' );
-    // define( 'TIMEBEFORE_MINUTES',     'Posted {num} minutes ago' );
-    // define( 'TIMEBEFORE_HOUR',        'Posted {num} hour ago' );
-    // define( 'TIMEBEFORE_HOURS',       'Posted {num} hours ago' );
-    // define( 'TIMEBEFORE_YESTERDAY',   'Posted yesterday' );
-    // define( 'TIMEBEFORE_FORMAT',      'Posted %e %b' );
-    // define( 'TIMEBEFORE_FORMAT_YEAR', 'Posted %e %b, %Y' );
+	function setTitle($title) {
+		$this->title = $title;
+	}
 
+	function getContent() {
+		return $this->content;
+	}
 
-    function time_ago( $date )
-    {
-        $out    = ''; // what we will print out
-        $now    = time(); // current time
-        $diff   = $now - $date; // difference between the current and the provided dates
+	function setContent($content) {
+		$this->content = $content;
+	}
 
-        if( $diff < 60 ) // it happened now
-            return TIMEBEFORE_NOW;
+	function getDate() {
+		return $this->date;
+	}
 
-        elseif( $diff < 3600 ) // it happened X minutes ago
-            return str_replace( '{num}', ( $out = round( $diff / 60 ) ), $out == 1 ? TIMEBEFORE_MINUTE : TIMEBEFORE_MINUTES );
+	function setDate($date) {
+		$this->date = $date;
+	}
 
-        elseif( $diff < 3600 * 24 ) // it happened X hours ago
-            return str_replace( '{num}', ( $out = round( $diff / 3600 ) ), $out == 1 ? TIMEBEFORE_HOUR : TIMEBEFORE_HOURS );
+	function getScore() {
+		return $this->score;
+	}
 
-        elseif( $diff < 3600 * 24 * 2 ) // it happened yesterday
-            return TIMEBEFORE_YESTERDAY;
+	function setScore($score) {
+		$this->score = $score;
+	}
 
-        else // falling back on a usual date format as it happened later than yesterday
-            return strftime( date( 'Y', $date ) == date( 'Y' ) ? TIMEBEFORE_FORMAT : TIMEBEFORE_FORMAT_YEAR, $date );
-    }
+	function getImage() {
+		return $this->image;
+	}
+
+	function setImage($image) {
+		$this->image = $image;
+	}
 
 }
 

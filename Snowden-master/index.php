@@ -1,7 +1,7 @@
 <?php 
     include_once('env.php');
     include_once('scripts/connection.php');
-    include_once('scripts/user.php');
+    // include_once('scripts/user.php');
 
     $connection = new Database($SNOWDEN_IP, $SNOWDEN_DB, $SNOWDEN_USER, $SNOWDEN_PASS);
 
